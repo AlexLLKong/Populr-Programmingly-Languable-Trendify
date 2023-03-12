@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 
 const PORT = 8000;
-const languages = [
+export const languages = [
 	{
 		name: "Python",
 		mCode: "05z1_",
@@ -75,6 +75,11 @@ app.use("/img", express.static("./public/img"))
  */
 app.get('/', async function (req, res) {
 	const doc = await readFile("./html/index.html", "utf8");
+    res.send(doc);
+});
+
+app.get('/language', async function (req, res) {
+	const doc = await readFile("./html/language.html", "utf8");
     res.send(doc);
 });
 

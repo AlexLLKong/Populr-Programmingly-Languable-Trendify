@@ -1,4 +1,4 @@
-const courses = [
+ export const courses = [
     {
      "School": "UBC",
      "CourseName": "Artificial Intelligence and Machine Learning",
@@ -307,4 +307,4 @@ const courses = [
      "Language": ["C"],
      "link": "https:\/\/www.bcit.ca\/courses\/introduction-to-operating-systems-for-cst-comp-4737\/"
     }
-   ]
+   ];
