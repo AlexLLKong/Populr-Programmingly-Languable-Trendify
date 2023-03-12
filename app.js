@@ -9,6 +9,7 @@ const PORT = 8000;
 app.use("/js", express.static("./public/js"))
 app.use("/css", express.static("./public/css"))
 app.use("/img", express.static("./public/img"))
+app.use("/template", express.static("./html/template"))
 
 // ENDPOINTS
 

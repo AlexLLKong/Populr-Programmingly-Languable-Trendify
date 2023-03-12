@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "bulma": "^0.9.4",
+    "express": "^4.18.2",
+    "material-components-web": "^14.0.0"
   }
 }
