@@ -29,45 +29,6 @@
             <div class="navbar-start">
             </div>
 
-            <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">Country</a>
-                <div class="navbar-dropdown">
-                    <a class="navbar-item">
-                        Canada
-                    </a>
-                </div>
-            </div>
-
-            <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">Region</a>
-                <div class="navbar-dropdown">
-                    <a class="navbar-item">
-                        BC
-                    </a>
-                </div>
-            </div>
-
-            <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">Time</a>
-                <div class="navbar-dropdown">
-					<a class="navbar-item" href="javascript:selectOneYear()">
-                        1 Year
-                    </a>
-                    <hr class="navbar-divider">
-					<a class="navbar-item" href="javascript:selectFiveYears()">
-                        5 Years
-                    </a>
-                    <hr class="navbar-divider">
-                    <a class="navbar-item" href="javascript:selectAllTime()">
-                        2004 - Present
-                    </a>
-                    <hr class="navbar-divider">
-                    <a class="navbar-item">
-                        More
-                    </a>
-                </div>
-            </div>
-
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
@@ -99,13 +60,34 @@
 				</div>
 			</div>
 				<div class="columns is-centered is-6">
-					<div class="column has-text-centered has-background-grey-lighter">SFU</div>
-					<div class="column has-text-centered has-background-grey-lighter">BCIT</div>
-					<div class="column has-text-centered has-background-grey-lighter">UBC</div>
+					<div class="column">
+						<h2 class="has-background-grey-lighter has-text-centered">SFU</h2>
+						<div id="SFU" class="">
+
+						</div>
+					</div>
+					<div class="column">
+						<h2 class="has-background-grey-lighter has-text-centered">BCIT</h2>
+						<div id="BCIT" class="">
+
+						</div>
+					</div>
+					<div class="column">
+						<h2 class="has-background-grey-lighter has-text-centered">UBC</h2>
+						<div id="UBC" class="">
+
+						</div>
+					</div>
 				</div>
 		
 		</div>
 	</div>
+	<template>
+		<div class="is-small">	
+			<p id="courseName" class="is-size-7"></p>
+			<hr>
+		</div>
+	</template>
 	<script src="https://d3js.org/d3.v5.min.js"></script>
 	<script src="/js/c3.min.js"></script>
     <script src="/js/language.js"></script>

@@ -2,7 +2,6 @@ import express from 'express';
 import { readFile } from 'node:fs/promises';
 import { readFileSync } from 'node:fs';
 import {JSDOM} from 'jsdom'
-import { scaleUtc, scaleLinear,  curveLinear, map as d3Map, InternSet, axisBottom, axisLeft, create, line as d3Line, max, extent, Delaunay, pointer, least, group, range } from 'd3';
 
 const app = express();
 const PORT = 8000;
@@ -27,9 +26,9 @@ const loadLanguageCharts = (charts) => {
 	return charts
 }
 const loadCourseData = () => {
-	return readFileSync("./json/course-data.js")
+	return readFileSync("./json/course-data.json", "utf8")
 }
-let courseData = loadCourseData();
+let courseData = loadCourseData()
 let charts = loadLanguageCharts(load3WayCharts({}));
 
 export const languages = [
@@ -46,7 +45,7 @@ export const languages = [
 		description: "C is a high-level compiled programming language that is widely used for systems programming, embedded systems, game development, and scientific computing. Its low-level control, portability, and efficiency make it an excellent choice for developers who need to develop fast and efficient code for a wide variety of platforms."
 	},
 	{
-		name: "C++",
+		name: "Cplusplus",
 		mCode: "/m/0jgqg",
 		jsonFile: "Cplusplus.json",
 		description: "C++ is a high-level, general-purpose, programming languagethat is an extension of the C. It is widely used for developing software applications of all types. Its support for object-oriented programming, speed and efficiency, and low-level control make it an excellent choice for developers who need to develop high-performance applications for a wide variety of platforms."
@@ -122,7 +121,7 @@ app.get('/languageDetails', async function (req, res) {
 });
 
 app.get('/courseData', async function (req, res) {
-    res.send(JSON.stringify(courseData));
+    res.send(courseData);
 });
 
 /**

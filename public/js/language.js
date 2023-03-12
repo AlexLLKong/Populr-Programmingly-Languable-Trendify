@@ -110,6 +110,16 @@ const loadDetails = async function () {
 const loadCourseData = async function ()  {
 	const response = await fetch("/courseData")
 	courses = await response.json()
+	courses = courses.courses
+	const template = document.getElementsByTagName("template")[0]
+	for(let i = 0; i < courses.length; i++) {
+		const course = courses[i]
+		if(course.Language.includes(languageName)) {
+			const clone = template.content.cloneNode(true)
+			clone.querySelector("#courseName").innerHTML = course.CourseName;
+			document.querySelector("#" + course.School).appendChild(clone)
+		}
+	}
 }
 loadName()
 loadDetails()
