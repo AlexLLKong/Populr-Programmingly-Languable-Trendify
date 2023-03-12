@@ -161,7 +161,7 @@ app.get('/language', async function (req, res) {
 	googleRequest.comparisonItem = createComparisonItem(languageDetails.mCode)
 	
 	const tokenRequest = {"comparisonItem":[{"keyword":languageDetails.mCode,"geo":"CA","time":"all"}],"category":0,"property":""}
-	const tokenResponse = await fetch(tokenRequestPrefix + JSON.stringify(tokenRequest))
+	const tokenResponse = await fetch(tokenRequestPrefix + JSON.stringify(tokenRequest), {credentials: "include"})
 	if (tokenResponse.status !== 200) {
 		res.send("failed due to status code: " + tokenResponse.status)
 	}
@@ -206,7 +206,6 @@ app.get('/test-call', (req,res) => {
 app.listen(PORT, (error) =>{
     if (!error) {
 		console.log("Server is Successfully Running, and App is listening on port " + PORT)
-		console.log(generateWeekDates())
 	}
     else 
         console.log("Error occurred, server can't start", error);
