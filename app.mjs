@@ -20,7 +20,48 @@ const languages = [
 		name: "C++",
 		mCode: "0jgqg",
 		description: "Description of C++"
+	},
+	{
+		name: "C#",
+		mCode: "07657k",
+		description: "Description of C#"
+	},
+	{
+		name: "HTML",
+		mCode: "03g20",
+		description: "Description of HTML"
+	},
+	{
+		name: "CSS",
+		mCode: "015tjh",
+		description: "Description of CSS"
+	},
+	{
+		name: "JavaScript",
+		mCode: "02p97",
+		description: "Description of JavaScript"
+	},
+	{
+		name: "Kotlin",
+		mCode: "0_lcrx4",
+		description: "Description of Kotlin"
+	},
+	{
+		name: "SQL",
+		mCode: "075st",
+		description: "Description of SQL"
+	},
+	{
+		name: "Assembly",
+		mCode: "0p8g",
+		description: "Description of Assembly"
+	},
+	{
+		name: "PHP",
+		mCode: "060kv",
+		description: "Description of PHP"
 	}
+	
 ]
 
 app.use("/js", express.static("./public/js"))
