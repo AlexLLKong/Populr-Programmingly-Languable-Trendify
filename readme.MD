@@ -7,6 +7,7 @@ npm ci
 ```
 
 # How to Run
+You must have Node V18+ installed 😉 (this is in order to use the Fetch API in Node without `node-fetch`)
 ```
 cd <into project>
 npm app.js
