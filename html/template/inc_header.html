@@ -1,1 +1,89 @@
-<p>this is header</p>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+            <img src="/img/logo.png" width="112" height="28">
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+           data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item">
+                <!-- Home -->
+            </a>
+
+            <a class="navbar-item">
+                <!-- Documentation -->
+            </a>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">Country</a>
+            <div class="navbar-dropdown">
+                <a class="navbar-item">
+                    Canada
+                </a>
+            </div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">Region</a>
+            <div class="navbar-dropdown">
+                <a class="navbar-item">
+                    BC
+                </a>
+            </div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">Time</a>
+            <div class="navbar-dropdown">
+                <a class="navbar-item" href="javascript:generateWeekDates()">
+                    1 week
+                </a>
+                <a class="navbar-item" href="javascript:generateMonthDates()">
+                    1 month
+                </a>
+                <a class="navbar-item" href="javascript:generateThreeMonthDates()">
+                    3 months
+                </a>
+                <a class="navbar-item" href="javascript:generateYearDates()">
+                    1 year
+                </a>
+                <a class="navbar-item" href="javascript:generateFiveYearDates()">
+                    5 years
+                </a>
+                <a class="navbar-item" href="javascript:generateTenYearDates()">
+                    10 years
+                </a>
+                <a class="navbar-item" href="javascript:generateOldestGoogleDates()">
+                    2004 - Present
+                </a>
+                <hr class="navbar-divider">
+                <a class="navbar-item">
+                    More
+                </a>
+            </div>
+        </div>
+
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a class="button is-primary">
+                        About Us
+                    </a>
+                    <a class="button is-light">
+                        Contact
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</nav>
