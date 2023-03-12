@@ -1,0 +1,47 @@
+{
+	"time": "2004-01-01+2023-03-12",
+	"resolution": "MONTH",
+	"locale": "en-US",
+	"comparisonItem": [
+		{
+			"geo": {
+				"country": "CA"
+			},
+			"complexKeywordsRestriction": {
+				"keyword": [{"type": "ENTITY","value": "/m/05z1_"}]
+			}
+		}
+	],
+	"requestOptions": {
+		"property": "",
+		"backend": "IZG",
+		"category": 0
+	},
+	"userConfig": {
+		"userType": "USER_TYPE_LEGIT_USER"
+	}
+}
+
+{
+	"time": "2004-02-11+2023-03-12",
+	"resolution": "MONTH",
+	"locale": "en-US",
+	"requestOptions": {
+		"property": "",
+		"backend": "IZG",
+		"category": 0
+	},
+	"userConfig": {
+		"userType": "USER_TYPE_LEGIT_USER"
+	},
+	"comparisonItem": [
+		{
+			"geo": {
+				"region": "CA-BC"
+			},
+			"complexKeywordsRestriction": {
+				"keyword": [{"type": "ENTITY","value": "/m/05z1_"}]
+			}
+		}
+	]
+}
