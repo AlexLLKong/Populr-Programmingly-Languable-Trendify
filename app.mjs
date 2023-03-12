@@ -84,6 +84,7 @@ export const languages = [
 app.use("/js", express.static("./public/js"))
 app.use("/css", express.static("./public/css"))
 app.use("/img", express.static("./public/img"))
+app.use("/template", express.static("./html/template"))
 
 // ENDPOINTS
 
@@ -92,6 +93,14 @@ app.use("/img", express.static("./public/img"))
  */
 app.get('/', async function (req, res) {
 	const doc = await readFile("./html/index.html", "utf8");
+    res.send(doc);
+});
+
+/**
+ * Compare page
+ */
+app.get('/comparetemp', async function (req, res) {
+	const doc = await readFile("./html/compare.html", "utf8");
     res.send(doc);
 });
 
