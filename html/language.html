@@ -4,21 +4,110 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trendify</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+		<link href="/css/c3.min.css" rel="stylesheet">
     <link href="/css/language.css">
     <title>Document</title>
 </head>
 <body>
-    <div class="grid-container">
-        <div class="language-info">
+	<nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <img src="/img/logo.png" width="112" height="28">
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+               data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+            </div>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">Country</a>
+                <div class="navbar-dropdown">
+                    <a class="navbar-item">
+                        Canada
+                    </a>
+                </div>
+            </div>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">Region</a>
+                <div class="navbar-dropdown">
+                    <a class="navbar-item">
+                        BC
+                    </a>
+                </div>
+            </div>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">Time</a>
+                <div class="navbar-dropdown">
+					<a class="navbar-item" href="javascript:selectOneYear()">
+                        1 Year
+                    </a>
+                    <hr class="navbar-divider">
+					<a class="navbar-item" href="javascript:selectFiveYears()">
+                        5 Years
+                    </a>
+                    <hr class="navbar-divider">
+                    <a class="navbar-item" href="javascript:selectAllTime()">
+                        2004 - Present
+                    </a>
+                    <hr class="navbar-divider">
+                    <a class="navbar-item">
+                        More
+                    </a>
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary">
+                            About Us
+                        </a>
+                        <a class="button is-light">
+                            Contact
+                        </a>
+                    </div>
+                </div>
+            </div>
 
         </div>
-        <div class="courses">
-
-        </div>
-        <div class="graph">
-
-        </div>
-    </div>
+    </nav>
+	<div class="container">
+		<div class="is-centered is-desktop hero-body">
+			<div class="has-text-centered mb-3">
+				<h1 id="languageName" class="title">
+				
+				</h1>
+				<p id="languageDescription">
+				
+				</p>
+			</div>
+			<div class="is-full">
+				<div id="graph" class="mb-5">
+			
+				</div>
+			</div>
+				<div class="columns is-centered is-6">
+					<div class="column has-text-centered has-background-grey-lighter">SFU</div>
+					<div class="column has-text-centered has-background-grey-lighter">BCIT</div>
+					<div class="column has-text-centered has-background-grey-lighter">UBC</div>
+				</div>
+		
+		</div>
+	</div>
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+	<script src="/js/c3.min.js"></script>
     <script src="/js/language.js"></script>
 </body>
 </html>

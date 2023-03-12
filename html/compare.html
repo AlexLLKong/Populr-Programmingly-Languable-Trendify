@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trendify</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+	<link href="/css/c3.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 
@@ -50,7 +51,15 @@
             <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link">Time</a>
                 <div class="navbar-dropdown">
-                    <a class="navbar-item" href="javascript:generateOldestGoogleDates()">
+					<a class="navbar-item" href="javascript:selectOneYear()">
+                        1 Year
+                    </a>
+                    <hr class="navbar-divider">
+					<a class="navbar-item" href="javascript:selectFiveYears()">
+                        5 Years
+                    </a>
+                    <hr class="navbar-divider">
+                    <a class="navbar-item" href="javascript:selectAllTime()">
                         2004 - Present
                     </a>
                     <hr class="navbar-divider">
@@ -76,8 +85,10 @@
         </div>
     </nav>
 
-    <div id="placeholder"></div>
+    <div id="chart"></div>
 
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+	<script src="/js/c3.min.js"></script>
     <script src="/js/compare.js"></script>
 </body>
 
