@@ -2,7 +2,7 @@
   "name": "populrprogramminglylanguabletrendify",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "app.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,8 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bulma": "^0.9.4",
     "express": "^4.18.2",
-    "material-components-web": "^14.0.0"
+    "jsdom": "^21.1.0"
   }
 }
